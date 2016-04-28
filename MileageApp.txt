@@ -1,0 +1,28 @@
+OTG Mileage 
+=============
+
+> I want to:
+>
+> * Enter Mileage
+	+ Date
+	+ Starting odometer:
+	+ Ending odometer:
+	+ Calculated mileage:
+	+ Description:
+	+ Client ID:	
+> * Track Mileage
+	+ Geolocation function
+> * View Mileage Log
+	+ Export mileage log
+> * Add/Edit Vehicle Information
+	+ Vehicle Info
+	    - Year:
+	    - Make:
+	    - Model:
+	    - VIN:
+	    - Insurance:
+	    - Policy Number:
+	    - Starting odometer:
+	    - Odometer reading on the first day of the year:
+	    - Odometer reading on the last day of the year:
+

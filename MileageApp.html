@@ -1,0 +1,85 @@
+<!DOCTYPE hmtl>
+<html>
+	<head>
+		<title>OTG Mileage</title>
+	</head>
+
+	<body>
+		<header>OTG Mileage</header>
+
+			<p>I want to:
+				<ul>
+					<li>Enter Mileage
+						<form method = "post" id = "enterMileage" action = "#">
+							<fieldset>
+								<legend>Enter Mileage</legend>
+
+								<label for = "tripDate" id = "tripDateLabel">Date</label>
+								<input type = "date" id = "tripDate" /><br />
+
+								<label for = "tripOdometer1" id = "tripOdometer1Label">Starting Odometer</label>
+								<input type = "number" id = "tripOdometer1" /><br />
+
+								<label for = "tripOdometer2" id = "tripOdometer2Label">Ending Odometer</label>
+								<input type = "number" id = "tripOdometer2" /><br />
+
+								<label for = "calculatedMileage" id = "calculatedMileageLabel">Calculated Mileage</label>
+								<input type = "number" id = "calculatedMileage" value = " "/><br />
+
+								<label for = "tripDescription" id = "tripDescriptionLabel">Description</label>
+								<input type = "text" id = "tripDescription" /><br />
+
+								<label for = "clientID" id = "clientIDlabel">Client ID</label>
+								<input type = "text" id = "clientID" /><br />
+
+								<input type = "submit" id = "Submit" />
+							</fieldset>
+						</form>
+					</li>
+					<li>Track Mileage
+						<ul>
+							<li>Geolocation function</li>
+						</ul>
+					</li>
+					<li>View Mileage Log
+						<ul>
+							<li>Export mileage log</li>
+						</ul>
+					</li>
+					<li>Add/Edit Vehicle Information
+						<form method = "post" id = "vehicleInfo" action = "#">
+							<fieldset>	
+								<legend>Vehicle Info</legend>
+								<label for = "vehicleYear" id = "vehicleYearLabel">Year</label>
+								<input type = "number" id = "vehicleYear" /><br />
+
+								<label for = "vehicleMake" id = "vehicleMakeLabel">Make</label>
+								<input type = "text" id = "vehicleMake" /><br />
+	    							
+	    						<label for = "vehicleModel" id = "vehicleModelLabel">Model</label>
+	    						<input type = "text" id = "vehicleModel" /><br />
+	    							
+	    						<label for = "vehicleVIN" id = "vehicleVINlabel">VIN</label>
+	    						<input type = "text" id = "vehicleVIN" /><br />
+
+	    						<label for = "insurance" id = "insuranceLabel">Insurance</label>
+	    						<input type = "text" id = "insurance" /><br />
+	    							
+	    						<label for = "policyNumber" id = "policyNumberLabel">Policy Number</label>
+	    						<input type = "text" id = "policyNumber" /><br />
+
+	    						<label for "startingOdometer" id = "startingOdometer">Starting odometer</label>
+	    						<input type = "number" id = "startingOdometer" /><br />
+
+	    						<label for = "odometerJan1" id = "odometerJan1">Odometer on January 1</label>
+	    						<input type = "number" id = "odometerJan1" /><br />
+	    							
+	    						<label for = "odometerDec31" id = "odometerDec31">Odometer on December 31</label>
+	    						<input type = "number" id = "odometerDec31" /><br />
+	    					</fieldset>
+	    				</form>
+	    			</li>
+	    		</ul>
+	    	</p>
+	</body>
+</html>
