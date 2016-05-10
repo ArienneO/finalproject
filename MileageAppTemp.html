@@ -7,59 +7,67 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
-<body class="Page">
+<body>
 	<header>
 		<h1>OTG Mileage</h1>
 	</header>
 	
 	<section id="trackPage" class="panel">
-			<button class="startBtn">Start Trip</button>
-			<button class="endBtn">End Trip</button>
-			<div id="map"></div>
+		<a href="trackPage" class="trigger">Start Trip</a>
+		<div class = "map"></div>
 	</section>
 
-	<section id="EnterMileagePage" class="panel">
+	<section id="enterMileagePage" class="panel">
 		<form action="#tripsPage" autocomplete="on">
+			<h2>Enter Mileage</h2>
+			<fieldset>
 				<label for="tripDate">Date</label>
 				<input type="date" id="tripDate" name="tripDate"/><br />
-
-				<label for="tripOdometer1">Starting Odometer</label>
-				<input type="number" id="tripOdometer1" name="tripOdometer1" /><br />
-
-				<label for="tripOdometer2">Ending Odometer</label>
-				<input type="number" id="tripOdometer2" name="tripOdometer2"/><br />
-
-				<label for="calculatedMileage">Calculated Mileage</label>
-				<input type="number" id="calculatedMileage" name="calculatedMileage"/><br />
-
+			</fieldset>
+			<fieldset>
 				<label for="tripDescription">Description</label>
 				<input type="text" id="tripDescription" name="tripDescription"/><br />
-
+			</fieldset>	
+			<fieldset>
 				<label for="clientID">Client ID</label>
 				<input type="text" id="clientID" name="clientID" /><br />
+			</fieldset>
+			<fieldset>
+				<label for="startLocation">Starting Location</label>
+				<input type="text" id="startLocation" name="startLocation"/><br />
 
+				<label for="endLocation">Ending Location</label>
+				<input type="text" id="endLocation" name="endLocation"/><br />
+			</fieldset>
+			<input id= "calcDist" type="button" value="Calculate Distance" />
+			<div id="map_canvas"></div>
+			<fieldset>
+				<label for="distance">Distance</label>
+				<input type="text" id="distance" name="distance" readonly="true"/><br />
+			</fieldset>
 			<input type = "submit" id="submitMileage" value="Submit Mileage"/>
 		</form>
 	</section>
 	<section id="tripsPage" class="panel">
-		List of Trips
+		<p>List of Trips</p>
+		<div class="tripsSummmary"></div>
 	</section>
 	<footer id="nav-bar" role="navigation">
   			<a class="nav_item" href="#trackPage">
     			<i class="fa fa-location-arrow fa-2x" aria-hidden="true"></i>
-    			<label id='itemlabel1'>Track</label>
+    			Track
   			</a>
   			<a class="nav_item" href="#tripsPage">
     			<i class="fa fa-car fa-2x" aria-hidden="true"></i>
-    			<label id='itemlabel2'>Trips</label>
+    			Trips
   			</a>
-  			<a class="nav_item" href="#expensesPage">
+  			<a class="nav_item" href="#EnterMileagePage">
     			<i class="fa fa-usd fa-2x" aria-hidden="true"></i>
-    			<label id='itemlabel3'>Expenses</label>
+    			Expenses
   			</a>
 	</footer>
+	<script src="http://maps.google.com/maps/api/js?key=AIzaSyBG4dBhXt8tIdWIKK9bR927DtbgGc7raXQ&sensor=true"></script>
 	<script src="js/script.js"></script>
-	
-	
+		
 </body>
 </html>

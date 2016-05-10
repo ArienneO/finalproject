@@ -29,10 +29,8 @@ html {
 
 body {
 	background-color: rgba( 61, 99,134,.1) ;
-	color: #fff;
 	font-family: Verdana, Arial, sans-serif;
 	font-size: 1rem;
-	margin: 0 auto;
 }
 
 a {
@@ -47,6 +45,7 @@ header, footer {
 	width: 100%;
 }
 
+
 footer {
 	position: fixed;
 	bottom: 0;
@@ -56,6 +55,7 @@ footer {
 .panel {
 	display: none;
 	font-size: 1.5rem;
+	width: 100%;
 }
 
 .panel.is-visible {
@@ -73,6 +73,7 @@ header {
 }
 
 header h1 {
+	color: #fff;
 	padding: 1rem;
 	text-align: center;
 }
@@ -102,8 +103,15 @@ i, a label {
 
 /* #trackPage Styles
 --------------------------------------------------------------*/
-#map {
-	height: 100%;
+
+
+label {
+	display: block;
+}
+
+input {
+	height: 3rem;
+	margin: 1rem 0;
 }
 
 button {
@@ -119,8 +127,58 @@ button {
 	text-align: center;
 }
 
-/* #enterMilagePage Styles
+/* #enterMileagePage Styles
  ------------------------------------------------------------*/
- label.tripInfo {
- 	color: rgba(61,99,134,1);
+ form {
+ 	background-color: #fff;
+ 	box-shadow: 0 0 20px #dcdcdc;
+ 	margin: 2rem auto;
+ 	min-height: 80%;
+ 	width: 90%;
  }
+
+ fieldset {
+ 	background-color: #9CB3C7;
+ 	border: 1px solid #dcdcdc;
+ 	margin: 1rem auto;
+ 	padding: 1.4rem 1.4rem .625rem 1.4rem;
+ 	width: 90%;
+ }
+
+ #map_canvas {
+ 	height: 100px;
+ 	width: 100%;
+ }
+
+ h2 {
+ 	font-size: 2rem;
+ 	padding: 1rem;
+ 	text-align: center;
+ }
+
+ input[type="text"] {
+ 	background-color: #fff;
+ 	border: solid 1px #dcdcdc;
+ 	display: block;
+ 	font-size: 1.2rem;
+ 	transition: box-shadow 0.3s, border 0.3s;
+ 	width: 100%;
+ }
+
+ input[type="text"]:focus {
+ 	border: solid 1px #707070;
+ 	box-shadow: 0 0 5px 1px #969696;
+ }
+
+ /*input[type="button"] {
+ 	border-radius: 1rem;
+	color: #fff;
+	display: block;
+	font-size: 2rem;
+	height: 5rem;
+	width: 70%;
+	background-color: #7794AE;
+	letter-spacing: .1rem;
+	margin: 2rem auto;
+	text-align: center;
+ }*/
