@@ -1,6 +1,7 @@
+
+
 (function() {
   var triggerEl = document.querySelector('.trigger');
-  var distanceData = {};
   //variables that encode and display the two locations
   var geocoder, location1, location2;
   // map variables
@@ -11,16 +12,11 @@
   // toggle view variables
   var triggers = document.querySelectorAll('a');
   var panelEls = document.querySelectorAll('.panel');
-  var databox;
-  var db;
+
   var homePage = document.getElementById('homePage');
 
   //adding event listener for nav bar
   function bindEvents() {
-  //  form.addEventListener("submit", function(e) {
-  //    console.log("Saving Value", form.elements.value.value);
-  //    e.preventDefault();
-  //  });
     for (var i=0; i < triggers.length; i++) {
       triggers[i].addEventListener('click', function(e) {
         var clickedEl = e.target; // clicked Element
@@ -45,6 +41,23 @@
     homePage.style.display = 'none';
   };
 
+    function submit() {
+      var item = {};
+      // Getting the values of the form fields.
+      item.tripDate = document.getElementById('tripDate').value;
+      item.tripDescription = document.getElementById('tripDescription').value;
+      item.clientID = document.getElementById('clientID').value;
+      item.startLocation = document.getElementById('startLocation').value;
+      item.endLocation = document.getElementById('endLocation').value;
+      item.distance = document.getElementById('distance').value;
+
+      localStorage.setItem(itemIndex, JSON.stringify(item));
+      for(var i=0; i<localStorage.length; i++) {
+        var key = localStorage.key(i);
+        var item = JSON.parse(localStorage.getItem(key));
+      }
+    };
+ 
 
   function initialize() {
   // Initial map function
@@ -87,26 +100,9 @@
       }
     });     
   }
-
-
-
-
   
-
-  
-
-  // Mileage Report functions 
-  document.querySelector("input").focus();
-  console.log(document.activeElement.tagName);
-
-  document.querySelector("input").blur();
-  console.log(document.activeElement.tagName);
-
-  var form = document.querySelector("form");
-  
-
-
   document.getElementById('calcDist').onclick = initialize;
+  document.getElementById('submitMileage').onclick = submit;
   bindEvents();
   
 })();
